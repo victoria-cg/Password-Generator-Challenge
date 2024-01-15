@@ -3,7 +3,7 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-//need to write/define function generatePassword() 
+//need to write/define function generatePassword().  Code on lines 4 and 7 is part of the starter code provided by the bootcamp for this assignment
 function generatePassword(){
 //prompt function for user to choose password legth
 var length = prompt("Enter you desired password length between 8-128 characters");
@@ -31,7 +31,7 @@ var lowerAlpha = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
 var specialChar = "!#$%&'(+)*,-./:;<=>?@[]^_`{ | } ~";
 //Make if else statements choosing character strings to concatenate based on boolean choices from prompt variables, this big string needs its own variable
-var includedChar = "";
+var includedChar = ""; //new variable will hold the chosen character types, and it starts as an empty string, later filled in by the following 'if' statements
 if (includeUpperAlpha) { 
   includedChar = includedChar.concat(upperAlpha); //this will combine the empty string in the new variable 'includedChar' with the string in the variable 'upperalpha' and make that what 'includedChar' equals
   console.log(includedChar); //adding console.log logs the result in the console so I can see my functions working
@@ -48,7 +48,9 @@ if (includeSpecialChar) {
   includedChar = includedChar.concat(specialChar);
   console.log(includedChar);
 }
-//use split to turn the concatenated strings end product into an array of possible characters for the password
+//use .split to turn the concatenated strings end product into a new array (named arrayIncludedChar) of included characters that are possible characters for the password
+var arrayIncludedChar = includedChar.split('');
+console.log(arrayIncludedChar); //shows my work in the console
 //use for loop an the math/random syntax to select random characters for the specified length variable
 
 //prompt function for user to select at least 1 character type: uppercase alpha, lowercase alpha, number, special characters: remove this, changing plan for functions
@@ -60,7 +62,7 @@ if (includeSpecialChar) {
 //at end of function write var finalpassword and return final password to global scope: do I need to do this if var password already runs function generatePassword()?
 }
 
-// Write password to the #password input
+// Write password to the #password input. The code below on lines 65-74 is the starter code provided by the bootcamp
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
