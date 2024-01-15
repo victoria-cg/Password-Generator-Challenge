@@ -30,9 +30,26 @@ var upperAlpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerAlpha = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
 var specialChar = "!#$%&'(+)*,-./:;<=>?@[]^_`{ | } ~";
-//Make if else statements choosing character strings to concatenate based on boolean choices for  prompt variables
-//use split to turn the concatenated strings into an array of possible characters for the password
-//use for loop an the math/random syntax to select random characters for  the specified length variable
+//Make if else statements choosing character strings to concatenate based on boolean choices from prompt variables, this big string needs its own variable
+var includedChar = "";
+if (includeUpperAlpha) { 
+  includedChar = includedChar.concat(upperAlpha); //this will combine the empty string in the new variable 'includedChar' with the string in the variable 'upperalpha' and make that what 'includedChar' equals
+  console.log(includedChar); //adding console.log logs the result in the console so I can see my functions working
+}
+if (includeLowerAlpha) {
+  includedChar = includedChar.concat(lowerAlpha);
+  console.log(includedChar);
+}
+if (includeNumbers) {
+  includedChar = includedChar.concat(numbers);
+  console.log(includedChar);
+}
+if (includeSpecialChar) {
+  includedChar = includedChar.concat(specialChar);
+  console.log(includedChar);
+}
+//use split to turn the concatenated strings end product into an array of possible characters for the password
+//use for loop an the math/random syntax to select random characters for the specified length variable
 
 //prompt function for user to select at least 1 character type: uppercase alpha, lowercase alpha, number, special characters: remove this, changing plan for functions
 //var charType = prompt("What types of characters do you want to include? Type 'uppercase, lowercase, numbers, symbols' to select one or more character type(s).")
