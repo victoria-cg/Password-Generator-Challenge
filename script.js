@@ -9,7 +9,7 @@ function generatePassword(){
 var length = prompt("Enter you desired password length between 8-128 characters");
 //validate length meets the criteria of 8-128 characters, alerts to try again if not valid
 if (length <8 || length >128 || (isNaN (length))) {
-  alert("You must enter a number between 8 and 128.");
+  alert("You must enter a number between 8 and 128. Refresh the page and try again.");
 }
 //Ask if user wants uppercase alphabet characters, confirm makes a boolean value for choice
 var includeUpperAlpha = confirm("Do you want uppercase letters in your password? Hit 'OK' to include them and cancel to skip them.");
@@ -21,7 +21,7 @@ var includeNumbers = confirm("Do you want numbers in your password? Hit 'OK' to 
 var includeSpecialChar = confirm("Do you want special characters in your password? Hit 'OK' to include them and cancel to skip them.");
 //if statement to alert if no character types chosen
 if (!includeUpperAlpha && !includeLowerAlpha && !includeNumbers && !includeSpecialChar) {
-  alert("You must select 'OK' for at least one type of character (Uppercase, lowercase, numbers, and/or special characters).");
+  alert("You must select 'OK' for at least one type of character (Uppercase, lowercase, numbers, and/or special characters). Refresh the page and try again.");
   //I think I need something else here to prevent the form form valdidation if not correct: would that just be return "" empty string or also an API like preventdefault to keep the form from going through??????????
 }
 
@@ -59,9 +59,6 @@ for (var i = 0; i< length; i++) {
  console.log(finalPassword); 
 }
 return finalPassword; //returns finalPassword to global scope so that it can be used by parent functions
-/*function finalPassword()*/
-//use a for loop to generate random characters and stop at chosen length
-//at end of function write var finalpassword and return final password to global scope: do I need to do this if var password already runs function generatePassword()?
 }
 
 // Write password to the #password input. The code below on lines 65-74 is the starter code provided by the bootcamp
