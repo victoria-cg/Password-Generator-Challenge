@@ -52,12 +52,13 @@ if (includeSpecialChar) {
 var arrayIncludedChar = includedChar.split('');
 console.log(arrayIncludedChar); //shows my work in the console
 //use for loop and the math/random syntax to select random characters for the specified length variable, the for loop runs for length of 'length' variable
-var randomChar = ""; //randomChar will start as an empty string until the for loop chooses some random characters to fill it in
+var finalPassword = "";  //finalPassword will start as an empty string until the for loop chooses some random characters to fill it in
 for (var i = 0; i< length; i++) {
- var finalPassword = arrayIncludedChar[Math.floor(Math.random() * arrayIncludedChar.length)]; //math.random syntax here selects random characters for finalPassword variable
- console.log(finalPassword); //unsure why this works and we need a separate var for var finalPassword instead of just var randomChar and var finalPassword being the same variable
+ var randomChar = arrayIncludedChar[Math.floor(Math.random() * arrayIncludedChar.length)]; //math.random syntax here selects 1 random character from arrayIncludedChar for randomChar variable
+ finalPassword += randomChar; //concatenate the 2 variables so that finalPassword accumulates each new random character made by the loop to make the full length password
+ console.log(finalPassword); 
 }
-//take variables created for each type of character and run function for random character selection in array
+return finalPassword; //returns finalPassword to global scope so that it can be used by parent functions
 /*function finalPassword()*/
 //use a for loop to generate random characters and stop at chosen length
 //at end of function write var finalpassword and return final password to global scope: do I need to do this if var password already runs function generatePassword()?
