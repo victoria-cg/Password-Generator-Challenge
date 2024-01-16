@@ -51,11 +51,12 @@ if (includeSpecialChar) {
 //use .split to turn the concatenated strings end product into a new array (named arrayIncludedChar) of included characters that are possible characters for the password
 var arrayIncludedChar = includedChar.split('');
 console.log(arrayIncludedChar); //shows my work in the console
-//use for loop an the math/random syntax to select random characters for the specified length variable
-
-//prompt function for user to select at least 1 character type: uppercase alpha, lowercase alpha, number, special characters: remove this, changing plan for functions
-//var charType = prompt("What types of characters do you want to include? Type 'uppercase, lowercase, numbers, symbols' to select one or more character type(s).")
-
+//use for loop and the math/random syntax to select random characters for the specified length variable, the for loop runs for length of 'length' variable
+var randomChar = ""; //randomChar will start as an empty string until the for loop chooses some random characters to fill it in
+for (var i = 0; i< length; i++) {
+ var finalPassword = arrayIncludedChar[Math.floor(Math.random() * arrayIncludedChar.length)]; //math.random syntax here selects random characters for finalPassword variable
+ console.log(finalPassword); //unsure why this works and we need a separate var for var finalPassword instead of just var randomChar and var finalPassword being the same variable
+}
 //take variables created for each type of character and run function for random character selection in array
 /*function finalPassword()*/
 //use a for loop to generate random characters and stop at chosen length
