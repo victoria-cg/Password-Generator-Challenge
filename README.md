@@ -15,7 +15,7 @@ The page runs in the browser, no special installation required.
 To use the password generator click the red "Generate Password" button, and then follow on screen prompts for text information to enter.
 
     
-    ![image of password generator webpage](./images/password-generator-screenshot.png)
+    ![image of password generator webpage](/images/password-generator-screenshot.png)
     
 
 ## Credits
