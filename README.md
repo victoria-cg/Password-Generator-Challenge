@@ -4,7 +4,6 @@
 This was the module 3 project for the UT/EdX coding bootcamp, which tasked me with completing provided Javascript code in order to make a function that would generate a random password meeting certain criteria. The project allowed me to gain practical expericence with Javascript variables, data types, methods, loops, and functions. This included problem solving around how to combine these different JavaScript components to solve a problem, in this case to prompt a user for critera and generate a random password string in response. I learned how to prompt users for input, how to choose random items from an array, and how to use the '.split' method demonstrated in class to convert data from one type to another. 
 
 
-## Table of Contents (Optional)
 
 ## Installation
 
